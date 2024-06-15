@@ -1,0 +1,25 @@
+.update-product{
+  text-align: justify;
+  font-family:'Times New Roman', Times, serif;
+
+}
+h1{
+  color:black;
+}
+
+.cancel-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cancel-button i {
+  margin-right: 5px;
+}

@@ -1,0 +1,94 @@
+<div class="add-product">
+  <h1>Add New Product</h1>
+  <p class="message-p">{{addProductMessage}}</p>
+  <button class="cancel-button" routerLink="/dashboard">
+    <i class="fa fa-times"></i> Cancel
+  </button>
+  <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)" class="common-form">
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter Product Name"
+      name="name"
+      ngModel
+      required
+    />
+    <input
+    type="text"
+    class="form-input"
+    placeholder="Enter Product Price"
+    name="price"
+    ngModel
+    required
+  />
+  <input
+  type="text"
+  class="form-input"
+  placeholder="Enter Product Category"
+  name="category"
+  ngModel
+  required
+/>
+<input type="color"
+  class="form-input"
+  placeholder="Enter Product Color"
+  name="color"
+  ngModel
+/>
+
+<input type="text"
+class="form-input"
+placeholder="Enter Product Description"
+name="general"
+ngModel
+required/>
+<input
+type="text"
+class="form-input"
+placeholder="performace"
+name="performace"
+ngModel
+required/>
+<input
+type="text"
+class="form-input"
+placeholder="Display"
+name="display"
+ngModel
+required/>
+<input
+type="text"
+class="form-input"
+placeholder="Camera"
+name="camera"
+ngModel
+required/>
+
+<input
+type="text"
+class="form-input"
+placeholder="Enter battery"
+name="battery"
+ngModel
+required/>
+<input
+type="text"
+class="form-input"
+placeholder="Enter Product Image URL"
+name="image"
+ngModel
+required
+/>
+<input
+type="number"
+class="form-input"
+placeholder="Product in stock"
+name="stock"
+ngModel
+required
+/>
+
+<button class="form-button">Add Product</button>
+
+  </form>
+</div>

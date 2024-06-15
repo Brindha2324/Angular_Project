@@ -1,0 +1,77 @@
+
+
+/* about-us.component.css */
+
+.about-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+
+}
+
+.team-section,
+.story-section,
+.why-choose-us-section,
+.customer-satisfaction-section,
+.community-engagement-section,
+.stay-connected-section,
+.contact-info {
+  margin-bottom: 30px;
+}
+
+.team-section img,
+.story-section img,
+.why-choose-us-section img,
+.community-engagement-section img,
+.stay-connected-section img,
+.contact-info img {
+  max-width: 100%;
+  height: auto;
+  width: 100%; /* Make the width 100% */
+  max-height: 400px;
+
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li strong {
+  font-weight: bold;
+}
+/* Add this CSS to your existing styles */
+.back-to-home-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-button i {
+  margin-right: 5px;
+}
+
+

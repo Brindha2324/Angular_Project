@@ -1,0 +1,161 @@
+
+
+.nav {
+    color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+}
+
+/* Keyframes animation for text color and opacity */
+@keyframes scaleAndColorAnimation {
+    0% {
+        color: red;
+        opacity: 1;
+        text-shadow: 2px 2px mediumslateblue;
+
+    }
+    25% {
+        color: blue;
+        opacity: 0.7;
+        text-shadow: 2px 2px mediumspringgreen;
+    }
+    50% {
+        color: green;
+        opacity: 1;
+        text-shadow: 2px 2px rgb(177, 228, 83);
+    }
+    75% {
+        color: orange;
+        opacity: 0.7;
+        text-shadow: 2px 2px rgb(163, 29, 123);
+    }
+    100% {
+        color: purple;
+        opacity: 1;
+        text-shadow: 2px 2px rgb(94, 197, 129);
+    }
+}
+
+/* Apply the animation to the <h1> element's anchor link */
+.nav h1 a {
+    text-decoration: none;
+    animation: scaleAndColorAnimation 3s ease-in-out infinite;
+}
+
+/* Styles for the search input */
+.nav-search input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    width: 250px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Styles for the search button */
+.nav-search button {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the search button */
+.nav-search button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the .nav-search container */
+.nav-search {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for the cart badge */
+.nav a.cart-badge {
+    position: relative;
+}
+
+/* Cart Items Badge */
+.cart-badge::after {
+    content: attr(data-count);
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+
+.nav ul li {
+    margin-right: 20px;
+}
+.nav ul li:hover {
+  margin-right: 20px;
+  text-transform:uppercase;
+  font-weight: bolder;
+  font-size: 14px;
+
+}
+
+
+.nav a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+.nav a:hover {
+    text-decoration:none;
+    color:mediumvioletred
+
+}
+
+
+.suggested-search {
+    list-style-type: none;
+    padding: 0;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Styles for suggested search list items */
+.suggested-search li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styles for suggested search links */
+.suggested-search a {
+    text-decoration: none;
+    color: #c72828;
+}
+
+

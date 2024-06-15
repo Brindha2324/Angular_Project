@@ -1,0 +1,41 @@
+table{
+  text-align: left;
+  color:rgb(71, 4, 71);
+  border-collapse: collapse;
+}
+img{
+  height: 100px;
+  width: 100px;
+}
+table td , table th{
+  border: 1px solid black;
+  padding: 05px;
+  min-width: 160pxs;
+}
+.adjust-update-link{
+  margin-left: 10px;
+}
+a{
+ color:blue;
+ align-items: center;
+
+}
+
+
+.dashboard-title {
+  font-size: 28px;
+  color: crimson;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  animation: slideHorizontal 8s linear infinite alternate; /* Apply the animation */
+}
+
+/* Define the keyframes for the animation */
+@keyframes slideHorizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(40px); /* Adjust the value as needed for the desired effect */
+  }
+}

@@ -1,0 +1,43 @@
+<nav class="nav">
+  <h1><a routerLink="" style="font-family: 'Times New Roman', Times, serif;font-size: 30px;">Smart Mobile Zone</a></h1>
+  <div *ngIf="menuType !== 'seller'" class="nav-search">
+    <input
+      type="text"
+      #searchInput
+      (keyup)="searchProduct($event)"
+      (blur)="hideSearch()"
+      placeholder="Search Products"
+    />
+    <button (click)="submitSearch(searchInput.value)">
+      <i class="fa fa-search"></i> <!-- Font Awesome search icon -->
+    </button>
+    <ul class="suggested-search" *ngIf="searchResult">
+      <li *ngFor="let item of searchResult">
+        <a (mousedown)="redirectToDetails(item.id)">{{ item.name }}</a>
+      </li>
+    </ul>
+  </div>
+  <div [ngSwitch]="menuType">
+    <ul *ngSwitchCase="'default'">
+      <li><a routerLink="admin-dashboard"><i class="fa fa-user"></i> Seller</a></li>
+      <li><a routerLink=""><i class="fa fa-home"></i>Home</a></li>
+      <li><a routerLink="user-auth"><i class="fa fa-sign-in"></i>Login</a></li>
+      <li><a href="#"><i class="fa fa-shopping-cart"></i>Cart({{ cartItems }})</a></li>
+    </ul>
+    <ul *ngSwitchCase="'user'">
+      <li><a routerLink="admin-dashboard"><i class="fa fa-user"></i> Seller</a></li>
+      <li><a routerLink=""><i class="fa fa-home"></i> Product</a></li>
+      <li><a><i class="fa fa-user"></i> {{ userName | titlecase }}</a></li>
+      <li><a routerLink="my-orders"><i class="fa fa-book"></i> My Orders</a></li>
+      <li><a (click)="userLogout()"><i class="fa fa-sign-out"></i> Logout</a></li>
+
+      <li><a [routerLink]="cartItems > 0 ? 'cart-page' : null"><i class="fa fa-shopping-cart"></i> Cart({{ cartItems }})</a></li>
+    </ul>
+    <ul *ngSwitchCase="'seller'">
+      <li><a routerLink="addproduct"><i class="fa fa-plus"></i> Add Product</a></li>
+      <li><a routerLink="dashboard"><i class="fa fa-list"></i> List</a></li>
+      <li><a (click)="userLogout()"><i class="fa fa-sign-out"></i> Logout</a></li>
+      <li><a href="#"><i class="fa fa-user"></i> {{ sellerName | titlecase }}</a></li>
+    </ul>
+  </div>
+</nav>
